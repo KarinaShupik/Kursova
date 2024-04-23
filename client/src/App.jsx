@@ -4,11 +4,13 @@ import {Home} from "./pages/Home"
 import {SignIn} from "./pages/SignIn"
 import {SignUp} from "./pages/SignUp"
 import {Profile} from "./pages/Profile"
+import {Header} from "./components/Header"
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/sign-in" element={<SignIn />}/>

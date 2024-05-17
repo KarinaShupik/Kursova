@@ -1,0 +1,64 @@
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__logo {
+    width: 60px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .header__nav {
+    display: flex;
+  }
+  
+  .header__nav-list {
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+    list-style: none;
+    display: flex;
+  }
+  
+  .header__nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .header__signin {
+    display: flex;
+  }
+  
+  .header__signin-button {
+    padding: 10px 30px;
+    border: 3px solid #0E2FA7;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .header__signin-button:hover{
+    border: 3px solid rgb(0, 0, 0);
+    transition: 0.3s easy;
+  }
+  

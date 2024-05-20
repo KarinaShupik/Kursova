@@ -45,6 +45,9 @@
   .add_info_sign-up {
     margin-top: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
   
   .sign-in_link {

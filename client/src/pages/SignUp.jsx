@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import '../styles/SignUp.css'
 import { useState } from 'react'
 
@@ -7,6 +7,7 @@ export function SignUp() {
   const [formData, setFormData] = useState({})
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
   const handleChange = (e) =>{
     setFormData({...formData, [e.target.id]: e.target.value})
   }
@@ -29,6 +30,7 @@ export function SignUp() {
         setError(true)
         return;
       }
+      navigate('/sign-in')
     } catch (error) {
       setLoading(false)
       setError(true)
@@ -47,8 +49,8 @@ export function SignUp() {
           </button>
         </form>
         <div className="add_info_sign-up">
-          <p>Have an account</p>
-          <Link to="/sing-in">
+          <p>Have an account?</p>
+          <Link to="/sign-in">
             <span className="sign-in_link">Sign In</span>
           </Link>
         </div>

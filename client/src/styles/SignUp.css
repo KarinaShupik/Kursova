@@ -4,9 +4,7 @@
     align-items: center;
     width: 50vw; /* Adjust width as needed */
     margin: 60px auto; /* Centers horizontally */
-    border: 1px solid #ccc;
     padding: 20px;
-    border-radius: 5px;
   }
   
   .page_title {

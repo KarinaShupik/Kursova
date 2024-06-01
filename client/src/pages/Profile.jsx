@@ -53,7 +53,7 @@ export function Profile() {
             <h1 className="profile_title">Profile</h1>
             <form className="profile_form">
                 <input type="file" ref={fileRef} hidden accept='image/*' onChange={(e) => setImage(e.target.files[0])}/>
-                <img src={currentUser.profilePicture} alt="Profile" className="profile_photo" onClick={() => fileRef.current.click()}/>
+                <img src={formData.profilePicture || currentUser.profilePicture} alt="Profile" className="profile_photo" onClick={() => fileRef.current.click()}/>
                 <p className='loading_span'>
                     {imageError ? (
                         <span className='error_load_mess'>

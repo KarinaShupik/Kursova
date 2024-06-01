@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "../styles/Header.css"
+import { useSelector } from 'react-redux'
 
 export function Header() {
-  
+  const {currentUser} = useSelector(state => state.user)
     return (
         <header className="header">
         <div className="container">
@@ -14,23 +15,36 @@ export function Header() {
           </div>
           <nav className="header__nav">
             <ul className="header__nav-list">
-              <li className="header__nav-item">
-                <a href="#" className="header__nav-link">Membership</a>
-              </li>
-              <li className="header__nav-item">
-                <a href="#" className="header__nav-link">Gallery</a>
-              </li>
-              <li className="header__nav-item">
-                <a href="#" className="header__nav-link">News</a>
-              </li>
-              <li className="header__nav-item">
-                <a href="#" className="header__nav-link">Contacts</a>
-              </li>
+              <Link to="#" >
+                <li className="header__nav-item header__nav-link">
+                  Membership
+                </li>
+              </Link>
+              <Link to="#" >
+                <li className="header__nav-item header__nav-link">
+                  Gallery
+                </li>
+              </Link>
+              <Link to="#" >
+                <li className="header__nav-item header__nav-link">
+                  News
+                </li>
+              </Link>
+              <Link to="#" >
+                <li className="header__nav-item header__nav-link">
+                  Contacts
+                </li>
+              </Link>
             </ul>
           </nav>
           <div className="header__signin">
-            
-            <a href="/sign-in" className="header__signin-button">Sign In</a>
+            <Link to='/profile'>
+            {currentUser ? (
+              <img src={currentUser.profilePicture} alt='profile' />
+            ) : (
+              <li>Sign In</li>
+            )}
+          </Link>
           </div>
         </div>
       </header>

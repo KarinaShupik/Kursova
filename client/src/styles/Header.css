@@ -47,6 +47,11 @@
   .header__signin {
     display: flex;
   }
+
+  .header__signin img {
+    width: 50px;
+    height: 50px;
+  }
   
   .header__signin-button {
     padding: 10px 30px;
@@ -61,4 +66,6 @@
     border: 3px solid rgb(0, 0, 0);
     transition: 0.3s easy;
   }
+
+
   

@@ -1,8 +1,7 @@
 import React from "react"
-import hero from "../img/hero_img.png"
 import "../styles/Home.css"
 
-export function Home() {
+export default function Hero() {
     return (
       <div className="hero">
         <div className="hero_container">

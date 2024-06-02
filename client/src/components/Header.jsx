@@ -40,7 +40,7 @@ export function Header() {
           <div className="header__signin">
             <Link to='/profile'>
             {currentUser ? (
-              <img src={currentUser.profilePicture} alt='profile' />
+              <img className="prof_pic_small" src={currentUser.profilePicture} alt='profile' />
             ) : (
               <li>Sign In</li>
             )}

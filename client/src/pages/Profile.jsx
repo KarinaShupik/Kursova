@@ -17,6 +17,7 @@ import {
   deleteUserFailure,
   signOut,
 } from '../redux/user/userSlice';
+import '../styles/Profile.css'
 
 
 export function Profile() {

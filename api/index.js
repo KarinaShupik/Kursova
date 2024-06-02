@@ -4,6 +4,8 @@ import dotenv from "dotenv"
 import userRoutes from "./routes/user.route.js"
 import authRoutes from "./routes/auth.route.js"
 import cookieParser from "cookie-parser"
+import path from 'path';
+import { fileURLToPath } from 'url';
 dotenv.config()
 
 mongoose.connect(process.env.MONGO).then(() => {
@@ -13,6 +15,11 @@ mongoose.connect(process.env.MONGO).then(() => {
 })
 
 const app = express()
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, 'img')));
 
 app.use(express.json())
 

@@ -12,10 +12,10 @@ import {
   updateUserStart,
   updateUserSuccess,
   updateUserFailure,
-  /*deleteUserStart,
+  deleteUserStart,
   deleteUserSuccess,
   deleteUserFailure,
-  signOut,*/
+  /*signOut,*/
 } from '../redux/user/userSlice';
 
 
@@ -89,6 +89,23 @@ export function Profile() {
         }
       }
 
+      const handleDeleteAccount = async () => {
+        try {
+          dispatch(deleteUserStart());
+          const res = await fetch(`/api/user/delete/${currentUser._id}`, {
+            method: 'DELETE',
+          });
+          const data = await res.json();
+          if (data.success === false) {
+            dispatch(deleteUserFailure(data));
+            return;
+          }
+          dispatch(deleteUserSuccess(data));
+        } catch (error) {
+          dispatch(deleteUserFailure(error));
+        }
+      };
+
       return (
           <div className="profile_stage">
               <h1 className="profile_title">Profile</h1>
@@ -115,7 +132,7 @@ export function Profile() {
                   <button className="profile_btn">Update</button>
               </form>
           <div className="additional_btn">
-              <span className="delete_btn">Delete Account</span>
+              <span onClick={handleDeleteAccount} className="delete_btn">Delete Account</span>
               <span className="signout_btn">Sign Out</span>
           </div>
           <p className='profile_err_mes'>{error && 'Something went wrong!'}</p>

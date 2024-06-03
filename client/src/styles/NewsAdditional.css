@@ -1,0 +1,79 @@
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; /* Positioning context for absolute positioning */
+}
+
+.news-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.news-card-content {
+    display: flex;
+    flex-direction: column; /* Ensures items stack vertically */
+    height: 100%; /* Ensures content fills the height */
+    padding: 15px;
+}
+
+.news-card-time {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.news-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.news-card-description {
+    font-size: 1rem;
+    margin-bottom: auto; /* Ensures "Read more" sticks to the bottom */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures text overflow is hidden */
+    text-overflow: ellipsis; /* Shows ellipsis if text overflows */
+    margin-bottom: 20px;
+}
+
+.news-card-read-more {
+    bottom: 15px; /* Adjust as needed */
+    left: 15px; /* Adjust as needed */
+    color: #0E2FA7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card-read-more::after {
+    content: '>';
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .news-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .news-card {
+        flex: 1 1 100%;
+    }
+}

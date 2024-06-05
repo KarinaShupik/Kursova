@@ -5,6 +5,7 @@ import News from "../pages/News.jsx"
 import NewsAdditional from "../pages/NewsAdditional.jsx"
 import Customers from "../pages/Customers.jsx"
 import ContactForm from "../pages/ContactForm.jsx"
+import LocationInfo from "../pages/LocationInfo.jsx"
 
 
 export function Home() {
@@ -16,6 +17,7 @@ export function Home() {
         <NewsAdditional />
         <Customers />
         <ContactForm />
+        <LocationInfo />
       </>
     )
 }

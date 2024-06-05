@@ -15,7 +15,7 @@ export function Header() {
           </div>
           <nav className="header__nav">
             <ul className="header__nav-list">
-              <Link to="#" >
+              <Link to="/membership" >
                 <li className="header__nav-item header__nav-link">
                   Membership
                 </li>
@@ -30,7 +30,7 @@ export function Header() {
                   News
                 </li>
               </Link>
-              <Link to="#" >
+              <Link to="/contacts" >
                 <li className="header__nav-item header__nav-link">
                   Contacts
                 </li>

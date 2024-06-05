@@ -1,9 +1,10 @@
 import React from 'react';
 import '../styles/LocationInfo.css';
+import { Link } from "react-router-dom"
 
 const LocationInfo = () => {
     return (
-        <div className="contact-info">
+          <div className="contact-info">
           <div className="location">
             <div className="info">
               <h2>WHERE WE ARE?</h2>

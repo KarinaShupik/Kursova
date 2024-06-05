@@ -7,6 +7,8 @@ import {Header} from "./components/Header"
 import PrivateRoute from "./components/PrivateRoute"
 import Gallery from "./pages/Gallery"
 import GeneralNews from "./pages/GeneralNews"
+import LocationInfo from "./pages/LocationInfo"
+import ContactForm from "./pages/ContactForm"
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/sign-up" element={<SignUp />}/>
         <Route path="/gallery" element={<Gallery />}/>
         <Route path="/news" element={<GeneralNews />}/>
+        <Route path="/contacts" element={<LocationInfo /> }/>
+        <Route path="/membership" element={<ContactForm /> }/>
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />}/>
         </Route>

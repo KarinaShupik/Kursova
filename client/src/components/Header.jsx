@@ -20,12 +20,12 @@ export function Header() {
                   Membership
                 </li>
               </Link>
-              <Link to="#" >
+              <Link to="/gallery" >
                 <li className="header__nav-item header__nav-link">
                   Gallery
                 </li>
               </Link>
-              <Link to="#" >
+              <Link to="/news" >
                 <li className="header__nav-item header__nav-link">
                   News
                 </li>

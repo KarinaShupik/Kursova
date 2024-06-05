@@ -1,8 +1,7 @@
 import React from "react"
 import Hero from "../pages/Hero.jsx"
 import Gallery from "../pages/Gallery.jsx"
-import News from "../pages/News.jsx"
-import NewsAdditional from "../pages/NewsAdditional.jsx"
+import GeneralNews from "../pages/GeneralNews.jsx"
 import Customers from "../pages/Customers.jsx"
 import ContactForm from "../pages/ContactForm.jsx"
 import LocationInfo from "../pages/LocationInfo.jsx"
@@ -13,8 +12,7 @@ export function Home() {
       <>
         <Hero />
         <Gallery />
-        <News />
-        <NewsAdditional />
+        <GeneralNews />
         <Customers />
         <ContactForm />
         <LocationInfo />

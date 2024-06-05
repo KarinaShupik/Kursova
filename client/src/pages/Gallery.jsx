@@ -10,7 +10,7 @@ import "../styles/Gallery.css"
 export default function Gallery() {
     return (
         <div className="gallery-container">
-        <h1>Gallery</h1>
+        <h1 id="gallery_title">Gallery</h1>
         <div className="gallery">
             <div className="gallery-item div1">
                 <img src={img1} alt="Image 1" />

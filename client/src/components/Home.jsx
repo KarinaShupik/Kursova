@@ -9,13 +9,13 @@ import LocationInfo from "../pages/LocationInfo.jsx"
 
 export function Home() {
     return (
-      <>
+      <div className="main_container">
         <Hero />
         <Gallery />
         <GeneralNews />
         <Customers />
         <ContactForm />
         <LocationInfo />
-      </>
+      </div>
     )
 }

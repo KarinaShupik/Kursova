@@ -29,13 +29,14 @@
   .contact-form input,
   .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     margin-bottom: 20px;
     border: 1px solid #0E2FA7;
     border-radius: 4px;
   }
   
   .contact-form button {
+    width: 100%;
     padding: 10px 200px;
     border: 3px solid #0E2FA7;
     background-color: #0E2FA7;
@@ -50,5 +51,66 @@
   .contact-image img {
     max-width: 100%;
     height: 380px;
+  }
+
+  @media (max-width: 840px){
+    .hero-title {
+      width: 650px;
+      font-size: 60px;
+    }
+    
+    .hero-subtitle {
+      font-size: 20px;
+      margin-top: -35px;
+    }
+
+    .contact-image img {
+      height: 300px;
+    }
+
+    .contact-form-container {
+      margin-top: 150px;
+    }
+  }
+
+  @media (max-width: 760px){
+    .contact-form-container {
+      flex-direction: column;
+    }
+
+    .contact-image img {
+      width: 100vw;
+      margin-top: 50px;
+    }
+
+    .contact-form {
+      width: 100%;
+      margin-right: 0px;
+    }
+
+    .contact-form button {
+      align-items: center;
+    }
+
+  }
+
+  @media (max-width: 630px){
+    .contact-form-container {
+      margin-top: 50px;
+    }
+
+    .contact-form button {
+      padding: 10px 100px;
+    }
+  }
+
+  @media (max-width: 470px){
+    .contact-form-container {
+      margin-top: 50px;
+    }
+
+    .contact-form button {
+      padding: 10px 100px;
+    }
   }
   

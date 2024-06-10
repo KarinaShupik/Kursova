@@ -22,17 +22,18 @@
     border-radius: 10px;
     padding: 20px;
     position: relative;
+    flex-direction: column;
 }
 
 .testimonial-content {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .customer-photo {
-    flex: 1;
-    text-align: right;
-    margin-right: 50px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .customer-photo img {
@@ -43,9 +44,8 @@
 }
 
 .customer-info {
-    flex: 2;
-    text-align: left;
-    margin-left: 20px;
+    text-align: center;
+    max-width: 500px;
 }
 
 .customer-info h2 {
@@ -62,14 +62,13 @@
 .testimonial-text {
     font-size: 1em;
     line-height: 1.5;
-    width: 500px;
+    width: 100%;
 }
 
 .pagination {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 20px;
-    margin-left: -5px;
 }
 
 .dot {
@@ -114,4 +113,57 @@
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive styles */
+@media (max-width: 840px){
+    .prev, .next {
+        top: 120%;
+    }
+}
+
+@media (max-width: 760px){
+    .customer-photo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .customer-info h2 {
+        font-size: 1.2em;
+    }
+    
+    .date-time {
+        font-size: 0.6em;
+    }
+    
+    .testimonial-text {
+        font-size: 0.9em;
+        width: 100%;
+    }
+}
+
+/* Responsive styles for screens smaller than 630px */
+@media (max-width: 720px) {
+    .testimonial {
+        flex-direction: column;
+    }
+
+    .customer-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .customer-info {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .testimonial-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prev, .next {
+        top: 50%;
+    }
 }

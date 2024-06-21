@@ -23,6 +23,11 @@
     max-width: 300px;
     margin-left: 20px;
   }
+
+  .info a{
+    color: black;
+    text-decoration: none;
+  }
   
   .info h2 {
     font-size: 24px;

@@ -14,6 +14,7 @@ const LocationInfo = () => {
           ></iframe>
         </div>
         <div className="info">
+        <a href="https://nupp.edu.ua/news/vilni-chitayut-ukrainskoyu-politekhnika-peredala-zibrani-knigi-do-bibliotek-khersonskoi-oblasti.html">Посилання на новини NUPP</a>
           <h2>WHERE WE ARE?</h2>
           <p>Ukraine, Poltava Heroiv ATO 17</p>
           <p>099 49 88 528</p>
